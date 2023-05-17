@@ -12,3 +12,4 @@ Powered by Firebase
 
 live firebase app - https://talk-up-6e5af.web.app/ 
 
+Code is avaliable on master branch - https://github.com/michalnatkanski/React-TalkUp/tree/master
