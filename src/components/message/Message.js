@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
 import {
     MessageContainer,
     MessageInfo,
     MessageLeft,
-    MessageRight
+    MessageRight,
+    EditIcon
 } from './Message.styles';
 
 const Message = ({
@@ -26,10 +27,12 @@ const Message = ({
                 {userId !== id ? (
                     <MessageLeft>
                         <p>{message}</p>
+
                     </MessageLeft>
                 ) : (
                     <MessageRight>
                         <p>{message}</p>
+                        <EditIcon />
                     </MessageRight>
                 )}
             </MessageInfo>
