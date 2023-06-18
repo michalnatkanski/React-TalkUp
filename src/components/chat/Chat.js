@@ -44,6 +44,13 @@ const Chat = () => {
         });
     }, [roomId, loading]);
 
+    const removeMessage = (docId) => {
+        db.collection('rooms')
+            .doc(roomId)
+            .collection('messages')
+            .doc(docId).delete();
+    }
+
     return (
         <ChatContainer>
             {roomDetails && roomMessages && (
@@ -59,7 +66,6 @@ const Chat = () => {
                             </p>
                         </HeaderRight>
                     </Header>
-
                     <ChatMesseges>
                         {roomMessages?.docs.map(doc => {
                             const {
@@ -79,12 +85,13 @@ const Chat = () => {
                                     userImage={userImage}
                                     userId={userId.uid}
                                     id={id}
+                                    docId={doc.id}
+                                    removeMessage={removeMessage}
                                 />
                             )
                         })}
                         <ChatBottom ref={chatRef} />
                     </ChatMesseges>
-
                     <ChatInput
                         chatRef={chatRef}
                         channelId={roomId}

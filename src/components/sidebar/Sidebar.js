@@ -28,7 +28,6 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 const Sidebar = () => {
     const [channels, loading, error] = useCollection(db.collection('rooms'));
     const [user] = useAuthState(auth);
-    //move to redux
     const [expandChannels, setExpandChannels] = useState(true);
     const [expandOptions, setExpandOptions] = useState(true);
 
@@ -46,7 +45,7 @@ const Sidebar = () => {
                 <>
                     <SidebarHeader>
                         <SidebarInfo>
-                            <h2>TalkUp</h2>
+                            <h2>Talk Up</h2>
                             <h3>
                                 <FiberManualRecordIcon />
                                 {user.displayName}

@@ -4,7 +4,7 @@ import {
     MessageInfo,
     MessageLeft,
     MessageRight,
-    EditIcon
+    RemoveIcon
 } from './Message.styles';
 
 const Message = ({
@@ -13,8 +13,13 @@ const Message = ({
     user,
     userImage,
     id,
-    userId
+    userId,
+    docId,
+    removeMessage
 }) => {
+
+
+
 
     return (
         <MessageContainer>
@@ -27,12 +32,11 @@ const Message = ({
                 {userId !== id ? (
                     <MessageLeft>
                         <p>{message}</p>
-
                     </MessageLeft>
                 ) : (
                     <MessageRight>
                         <p>{message}</p>
-                        <EditIcon />
+                        <RemoveIcon onClick={() => removeMessage(docId)} />
                     </MessageRight>
                 )}
             </MessageInfo>

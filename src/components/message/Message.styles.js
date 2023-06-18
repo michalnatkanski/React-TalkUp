@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import CreateIcon from '@mui/icons-material/Create';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 export const MessageContainer = styled.div`
     display: flex;
@@ -41,7 +42,7 @@ export const MessageRight = styled.div`
     margin-top: 5px;
 `;
 
-export const EditIcon = styled(CreateIcon)`
+export const RemoveIcon = styled(DeleteIcon)`
     margin-left: 5px;
     color: gray;
     cursor: pointer;
