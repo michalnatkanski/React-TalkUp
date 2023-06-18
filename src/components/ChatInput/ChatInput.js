@@ -9,7 +9,7 @@ const ChatInput = ({ channelName, channelId, chatRef }) => {
 
     const [input, setInput] = useState('');
     const [user] = useAuthState(auth);
-    console.log(channelName, channelId, chatRef)
+
     const sendMessage = () => {
 
         if (!channelId) return;

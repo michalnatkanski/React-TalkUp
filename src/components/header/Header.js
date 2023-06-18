@@ -29,7 +29,7 @@ const Header = () => {
             </HeaderLeft>
             <HeaderSearch>
                 <SearchIcon />
-                <input placeholder='Search TalksUp' />
+                <input placeholder='Search Talk Up' />
             </HeaderSearch>
             <HeaderRight>
                 <HelpOutlineIcon />
