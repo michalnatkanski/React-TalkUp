@@ -1,6 +1,6 @@
 #TODO (Project is still in progress):
 
-- add functionality for removing messages
+- add functionality for removing messages - DONE
 - add onboarding screens
 - migration to typescript
 
